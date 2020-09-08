@@ -1,0 +1,275 @@
+.layout {
+  display: flex;
+  justify-content: center;
+  &-lnb {
+    display: inline-flex;
+    // width: 480px;
+    width: 380px;
+    height: 100vh;
+    &-header {
+      padding: 50px;
+      >h1 {
+        font-size: 24px;
+      }
+      &-address {
+        margin-top: 100px;
+        >a {
+          font-size: 18px;
+        }
+      }
+      &-site {
+        margin-top: 100px;
+        >ul {
+          padding: 0px;
+          margin-top: 0px;
+          >li {
+            &:nth-child(2) {
+              margin: 16px 0px;
+            }
+            display: block;
+            >a {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-gnb {
+    display: inline-flex;
+    // width: calc(100% - 700px);
+    width: 1000px;
+    height: 100vh;
+    &-main {
+      padding: 50px;
+      &-nav {
+        >ul {
+          display: flex;
+          margin: 0px;
+          padding: 0px;
+          >li {
+            display: block;
+            >a {
+              // background-color: white;
+              background-color: black;
+              border: none;
+              color: white;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 16px;
+              margin: 4px 2px;
+              cursor: pointer;
+              &:active {
+                background-color: teal;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &-footer {
+    color: gray;
+  }
+}
+.selected-page {
+  background-color: black;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* PC , 테블릿 가로 (해상도 768px ~ 1023px)*/
+@media all and (min-width:768px) and (max-width:1400px) {
+  .layout {
+    display: inline;
+    // flex-wrap: wrap;
+    // justify-content: center;
+    &-lnb {
+      height: 150px;
+      &-header {
+        display: flex;
+        justify-content: start;
+        height: 150px;
+        h1 {
+          display: block;
+          margin: 0px 20px 0px 0px;
+          width: 300px;
+          // background-color: blue;
+        }
+        &-address {
+          margin: 0px;
+          margin: 0px 20px 0px 0px;
+          width: 300px;
+          // background-color: green;
+        }
+        &-site {
+          width: 300px;
+          margin: 0px;
+          // background-color: orange;
+        }
+      }
+    }
+  }
+}
+
+// @media all and (min-width:768px) and (max-width:1023px) {
+//   .layout {
+//     &-lnb { 
+//       width: 380px;
+//       height: 50vh;
+//       display: inline-flex;
+//       // width: 480px;
+//       width: 380px;
+//       &-header {
+//         >h1 {
+//           width: 200px;
+//           height: 100px;
+//         }
+//         display: flex;
+//         flex-direction: left;
+//         &-address {
+//           display: inline-flex;
+//           flex-wrap: wrap;
+//           flex-direction: right;
+//         }
+//         &-site {
+//           display: inline-flex;
+//           flex-direction: right;
+//           flex-wrap: wrap;
+//         }
+//       }
+//     }
+//   }
+//   /*스타일입력*/
+//   body {
+//     background-color: green;
+//   }
+// }
+
+/* 테블릿 세로 (해상도 768px ~ 1023px)*/
+@media all and (min-width:768px) and (max-width:1023px) {
+  /*스타일입력*/
+}
+
+/* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
+@media all and (min-width:480px) and (max-width:767px) {
+  .layout {
+    display: inline;
+    &-lnb {
+      height: 350px;
+      &-header {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        h1 {
+          display: block;
+          height: 50px;
+          margin: 0px 20px 0px 0px;
+          width: 300px;
+          // background-color: blue;
+        }
+        &-address {
+          margin: 0px;
+          margin: 0px 20px 0px 0px;
+          width: 300px;
+          // background-color: green;
+        }
+        &-site {
+          width: 300px;
+          margin: 0px;
+          // background-color: orange;
+        }
+      }
+    }
+    &-gnb {
+      display: inline-flex;
+      // width: calc(100% - 700px);
+      width: 100%;
+      height: 100vh;
+      &-main {
+        padding: 50px;
+        &-nav {
+          >ul {
+            display: flex;
+            margin: 0px;
+            padding: 0px;
+            >li {
+              display: block;
+              >a {
+                // background-color: white;
+                background-color: black;
+                border: none;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                &:active {
+                  background-color: teal;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
+@media all and (max-width:479px) {
+  /*스타일입력*/
+  html, body {
+    overflow-x: hidden;
+  }
+  .layout {
+    display: inline;
+    &-lnb {
+      height: 350px;
+      &-header {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        h1 {
+          display: block;
+          height: 50px;
+          margin: 0px 20px 0px 0px;
+          // background-color: blue;
+        }
+        &-address {
+          margin: 0px;
+          margin: 0px 20px 0px 0px;
+          // background-color: green;
+        }
+        &-site {
+          margin: 0px;
+          // background-color: orange;
+        }
+      }
+    }
+    &-gnb {
+      display: inline-flex;
+      width: inherit;
+      height: 100vh;
+      &-main {
+        padding: 0px;
+        margin-left: 10px;
+        margin-right: 10px;
+        &-nav {
+
+          >ul {
+            display: flex;
+            margin: 0px;
+            padding: 0px;
+          }
+        }
+      }
+    }
+  }
+}

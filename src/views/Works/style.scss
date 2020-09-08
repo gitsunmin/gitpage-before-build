@@ -1,0 +1,30 @@
+/* init */
+.works-list {
+  padding: 0px;
+  >li {
+    border: 1px dashed black;
+    border-radius: 5px;
+    display: block;
+    margin: 10px 0px;
+    padding: 0px;
+    >h3,h4 { margin: 0px; }
+  }
+}
+
+.works {
+  border-top: 1px solid black;
+  padding: 0px 20px;
+  font-size: 20px;
+  &-list {
+    >li {
+      padding: 10px;
+    }
+    .tech-chip {
+      display: flex;
+      border-radius: 12px;
+      margin: 5px 5px;
+      padding: 4px;
+      border: 1px solid black;
+    }
+  }
+}

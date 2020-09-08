@@ -1,0 +1,41 @@
+<div class="layout main-font">
+  <header class="layout-lnb">
+    <div class="layout-lnb-header">
+      <h1>kim sunmin</h1>
+      <div class="layout-lnb-header-address">
+        <a href="mailto:tjsals116@gmail.com">tjsals116@gmail.com</a>
+        <p>Suwon, Korea</p>
+      </div>
+      <div class="layout-lnb-header-site">
+        <ul>
+          <li><a target="_blank" href="https://github.com/gitsunmin">Github ( gitsunmin )</a></li>
+          <li><a target="_blank" href="https://sitmin.tistory.com/">Blog ( sitmin )</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <main class="layout-gnb">
+    <div class="layout-gnb-main">
+      <nav class="layout-gnb-main-nav">
+        <ul>
+          <li :class="{ 'selected-page': isSelection('/') }">
+            <a @click="movePage('/')">
+              Home
+            </a>
+          </li>
+          <li :class="{ 'selected-page': isSelection('/works') }">
+            <a @click="movePage('/works')">
+              Works
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <article>
+        <router-view />
+        <footer class="layout-footer">
+          마지막 변경 날짜: 2020.08.26
+        </footer>
+      </article>
+    </div>
+  </main>
+</div>

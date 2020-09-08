@@ -1,0 +1,39 @@
+<div class="works main-font">
+  <summary class="works-summary">
+    <h1>경력기술서</h1>
+    <!-- <p>
+      대학생 시절의 해커톤부터 회사생활을 하며,
+      개발하였던 것들에 대해서 나열 해 보았습니다.
+    </p> -->
+  </summary>
+  <ol class="works-list">
+    <li v-for="(career, index) of careerList" class="work-list-career">
+      <h4>소속: {{ career.companyName }}</h4>
+      <h4>파트: {{ career.partName }}</h4>
+      <h4>직급: {{ career.position }}</h4>
+      <h4>기간: {{ career.term.start }} ~ {{ career.term.end }} </h4>
+      <ol class="project-list">
+        <li v-for="(project) of career.projectList">
+          <div>
+            프로젝트명: {{ project.name }}
+          </div>
+          <div>
+            설명: {{ project.description }}
+          </div>
+          <div>
+            역할: {{ project.part }}
+          </div>
+          <div>
+            개발시기: {{ project.term.start }} ~ {{ project.term.end }}
+          </div>
+          <div>
+            사용 언어 및 기술:
+            <span v-for="(tech) of project.techList" class="tech-chip">
+              <div>{{ tech }}</div>
+            </span>
+          </div>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</div>

@@ -1,0 +1,24 @@
+.home {
+  border-top: 1px solid black;
+  padding: 0px 20px;
+  font-size: 20px;
+  // &-cytoscape {
+  // }
+}
+
+.tech-stack {
+  background-color: rgba(191, 234, 229, 0.4);
+  width: inherit;
+  height: inherit;
+  border-radius: 4px;
+}
+@media all and (min-width:480px) and (max-width:767px) {
+  #cytoscape-div {
+    min-height: 500px !important;
+  }
+}
+@media all and (max-width:479px) {
+  #cytoscape-div {
+    min-height: 300px !important;
+  }
+}
