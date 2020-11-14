@@ -7,7 +7,7 @@ const careerList = [
     position: '매니저',
     term: {
       start: '2019-07-08',
-      end: '재직중',
+      end: '2020-10-16',
     },
     projectList: [
       {
@@ -16,7 +16,7 @@ const careerList = [
         part: '프론트엔드',
         term: {
           start: '2019-08',
-          end: '진행중',
+          end: '2020-10',
         },
         techList: [
           'Vue(Quasar Framework)',
@@ -54,6 +54,30 @@ const careerList = [
           'sass / scss',
           'axios',
           'Google API(oauth를 이용한 로그인 구현)',
+        ],
+      },
+    ],
+  },
+  {
+    companyName: '(주) 마켓보로',
+    partName: '프론트엔드 팀',
+    position: '주임',
+    term: {
+      start: '2020-10-19',
+      end: '재직중',
+    },
+    projectList: [
+      {
+        name: '비공개',
+        description: '(개발중)',
+        part: '프론트엔드',
+        term: {
+          start: '2020-10-19',
+          end: '진행중',
+        },
+        techList: [
+          'Vue(vutify Framework)', 'Storybook',
+          'GraphQL', 'Apollo',
         ],
       },
     ],
